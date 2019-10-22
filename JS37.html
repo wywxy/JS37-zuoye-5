@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS37</title>
+</head>
+<body>
+	<script>
+		// 第一题：
+		var a=245;
+		var a1=45;
+		var a2=72;
+		var a3=12;
+		var a4=39;
+		document.write(Math.max(a,a1,a2,a3,a4)+'是最大值');
+		document.write('<br>');
+		document.write(Math.min(a,a1,a2,a3,a4)+'是最小值');
+		document.write('<hr>');
+		// 第二题：
+		for(var k=1;k<=4;k++){
+			document.write(Math.floor(Math.random()*10));
+		}
+		document.write('<hr>');
+		// 第三题：
+		var i='1_b$d14';
+		var str=/^[A-Za-z_$][A-Za-z_$0-9]/;
+		if(str.test(i)) {
+			document.write('字符串符合要求');
+		}else {
+			document.write('字符串不符合要求');
+		}
+	</script>
+</body>
+</html>
