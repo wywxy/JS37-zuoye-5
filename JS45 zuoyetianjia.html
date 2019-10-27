@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS45 zuoyetianjia</title>
+	<style>
+		span {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="sr" value="">
+	<button id="but1">添加</button><br>
+	<ol id="show"></ol>
+	<button id="but2">清空列表</button>
+	<script src="libs/jquery.min.js"></script>
+	<script>
+		var i=0;
+		$('#but1').click(function() {
+			if($('#sr').val()!="") {
+				$('#show').prepend("<li> "+"<span>X </span>"+$("#sr").val()+"</li>");
+				$('#sr').val("");
+				$('span').click(function() {
+					$(this).parent().remove();
+				});
+			}else{
+				alert('还没填写内容');
+			}
+		});
+		$('#but2').click(function() {
+			$('#show').empty();
+		});
+	</script>
+</body>
+</html>
